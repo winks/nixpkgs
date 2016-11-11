@@ -120,6 +120,7 @@ doNotDisplayTwice rec {
     ocamlPackages_3_10_0 ocamlPackages_3_11_2 ocamlPackages_3_12_1
     ocamlPackages_4_00_1 ocamlPackages_4_01_0 ocamlPackages_4_02
     ocamlPackages_4_03
+    ocamlPackages_4_04
     ocamlPackages_latest;
 } // (with ocaml-ng; { # added 2016-09-14
   ocaml_3_08_0 = ocamlPackages_3_08_0.ocaml;
@@ -130,5 +131,6 @@ doNotDisplayTwice rec {
   ocaml_4_01_0 = ocamlPackages_4_01_0.ocaml;
   ocaml_4_02   = ocamlPackages_4_02.ocaml;
   ocaml_4_03   = ocamlPackages_4_03.ocaml;
+  ocaml_4_04   = ocamlPackages_4_04.ocaml;
   ocaml        = ocamlPackages.ocaml;
 })

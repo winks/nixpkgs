@@ -43,7 +43,7 @@ stdenv.mkDerivation (args // rec {
   installTargets = "install" + optionalString useNativeCompilers " installopt";
   preConfigure = ''
     CAT=$(type -tp cat)
-    sed -e "s@/bin/cat@$CAT@" -i config/auto-aux/sharpbang
+    sed -e "s@/bin/cat@$CAT@" -i config/auto-aux/sharpbang || true
   '';
   postBuild = ''
     mkdir -p $out/include
@@ -56,7 +56,7 @@ stdenv.mkDerivation (args // rec {
 
   meta = with stdenv.lib; {
     homepage = http://caml.inria.fr/ocaml;
-    branch = "4.03";
+    branch = "4.04";
     license = with licenses; [
       qpl /* compiler */
       lgpl2 /* library */
